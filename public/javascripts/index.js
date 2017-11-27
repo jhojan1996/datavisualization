@@ -67,6 +67,8 @@ $(document).ready(function () {
         contadorData.shift();
       }
 
+      console.log("Llegue hasta aca: ", obj.dato_contador);
+
       myLineChart.destroy();
 
       ctx = document.getElementById("myChart").getContext("2d");
