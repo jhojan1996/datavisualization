@@ -19,6 +19,7 @@ $(document).ready(function () {
   }
 
   var basicOption = {
+    events: ['click'],
     title: {
       display: true,
       text: 'Datos del contrador en litros cada 15 minutos',
