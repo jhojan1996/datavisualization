@@ -67,6 +67,11 @@ $(document).ready(function () {
         contadorData.shift();
       }
 
+      myLineChart.data.labels.push(timeData);
+      myLineChart.data.datasets.forEach((dataset) => {
+        dataset.data.push(contadorData);
+      });
+
       myLineChart.update();
     } catch (err) {
       console.error(err);
