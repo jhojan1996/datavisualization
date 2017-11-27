@@ -67,12 +67,16 @@ $(document).ready(function () {
         contadorData.shift();
       }
 
-      myLineChart.data.labels.push(timeData);
-      myLineChart.data.datasets.forEach((dataset) => {
-        dataset.data.push(contadorData);
+      myLineChart.destroy();
+
+      ctx = document.getElementById("myChart").getContext("2d");
+      myLineChart = new Chart(ctx, {
+        type: 'line',
+        data: data,
+        options: basicOption
       });
 
-      myLineChart.update();
+      //myLineChart.update();
     } catch (err) {
       console.error(err);
     }
