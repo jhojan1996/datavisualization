@@ -67,14 +67,7 @@ $(document).ready(function () {
         contadorData.shift();
       }
 
-      //myLineChart.update();
-      myLineChart.destroy();
-
-      myLineChart = new Chart(ctx, {
-        type: 'line',
-        data: data,
-        options: basicOption
-      });
+      myLineChart.update();
     } catch (err) {
       console.error(err);
     }
