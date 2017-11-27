@@ -7,7 +7,6 @@ $(document).ready(function () {
       {
         fill: false,
         label: 'Contador',
-        yAxisID: 'Contador',
         borderColor: "rgba(255, 204, 0, 1)",
         pointBoarderColor: "rgba(255, 204, 0, 1)",
         backgroundColor: "rgba(255, 204, 0, 0.4)",
@@ -26,13 +25,9 @@ $(document).ready(function () {
     },
     scales: {
       yAxes: [{
-        id: 'Contrador',
-        type: 'linear',
-        scaleLabel: {
-          labelString: 'Contador(Litros)',
-          display: true
-        },
-        position: 'left',
+        ticks: {
+            beginAtZero:true
+        }
       }]
     }
   }
@@ -69,16 +64,7 @@ $(document).ready(function () {
 
       console.log("Llegue hasta aca: ", obj.dato_contador);
 
-      myLineChart.destroy();
-
-      ctx = document.getElementById("myChart").getContext("2d");
-      myLineChart = new Chart(ctx, {
-        type: 'line',
-        data: data,
-        options: basicOption
-      });
-
-      //myLineChart.update();
+      myLineChart.update();
     /*} catch (err) {
       console.error(err);
     }*/
