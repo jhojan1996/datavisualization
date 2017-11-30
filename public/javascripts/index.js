@@ -47,7 +47,7 @@ $(document).ready(function () {
   }
   ws.onmessage = function (message) {
     console.log('receive message' + message.data);
-    //try {
+    try {
       var obj = JSON.parse(message.data);
       if(!obj.time || !obj.dato_contador) {
         return;
@@ -65,8 +65,8 @@ $(document).ready(function () {
       console.log("Llegue hasta aca: ", obj.dato_contador);
 
       myLineChart.update();
-    /*} catch (err) {
+    } catch (err) {
       console.error(err);
-    }*/
+    }
   }
 });
