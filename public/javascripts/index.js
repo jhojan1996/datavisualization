@@ -145,7 +145,7 @@ $(document).ready(function () {
 
       console.log(datos[i].mes+"------------->",k);
 
-      if(k < 6){
+      if(k <= 6){
         while(k < 7){
           table += `
             <td></td>
