@@ -102,7 +102,7 @@ $(document).ready(function () {
   /* -------------- */
 
 
-  /* Promedio por semana */
+  /* Promedio por semana
   const container = document.getElementById("semana");
   let div;
   let div2;
@@ -143,7 +143,7 @@ $(document).ready(function () {
        k++;
       }
 
-      console.log(datos[i].mes+"------------->",k);
+      //console.log(datos[i].mes+"------------->",k);
 
       if(k <= 6){
         while(k < 7){
@@ -158,7 +158,6 @@ $(document).ready(function () {
           </tr>
         </table>
       `;
-      console.log("table-------------->",table);
       div2 = document.createElement("div");
       div2.innerHTML = table;
       container.appendChild(div2);
@@ -171,6 +170,6 @@ $(document).ready(function () {
   }
 
 
-  /* ------------------- */
+   */
 
 });
