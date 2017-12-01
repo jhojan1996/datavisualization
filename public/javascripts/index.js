@@ -143,6 +143,8 @@ $(document).ready(function () {
        k++;
       }
 
+      console.log(datos[i].mes+"------------->",k);
+
       if(k < 6){
         while(k < 7){
           table += `
