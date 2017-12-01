@@ -133,7 +133,7 @@ $(document).ready(function () {
           <tr>
       `;
       while(k < datos[i].semanas[j].dias.length){
-        console.log(datos[i].semanas[j].dias.length, "k------>"+k)
+        //console.log(datos[i].semanas[j].dias.length, "k------>"+k)
         sumaSemana += datos[i].semanas[j].dias[k].litros;
         table += `
             <td>${datos[i].semanas[j].dias[k].litros}</td>
@@ -145,6 +145,7 @@ $(document).ready(function () {
           </tr>
         </table>
       `;
+      console.log("table-------------->",table)
       container.innerHTML = table;
       sumaSemana = 0;
       k = 0;
