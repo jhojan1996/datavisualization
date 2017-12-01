@@ -4,7 +4,6 @@ $(document).ready(function () {
   var timeData = [],
     contadorData = [];
   var data = {
-    labels: timeData,
     datasets: [
       {
         fill: false,
@@ -22,7 +21,7 @@ $(document).ready(function () {
   var basicOption = {
     title: {
       display: true,
-      text: 'Datos del contrador en litros cada 15 minutos',
+      text: 'Consumo de agua medido en el sensor',
       fontSize: 36
     },
     scales: {
