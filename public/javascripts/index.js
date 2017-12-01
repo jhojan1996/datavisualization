@@ -105,6 +105,7 @@ $(document).ready(function () {
   /* Promedio por semana */
   const container = document.getElementById("semana");
   let div;
+  let div2;
   let table;
   let sumaSemana = 0;
   prom = 0;
@@ -145,8 +146,10 @@ $(document).ready(function () {
           </tr>
         </table>
       `;
-      console.log("table-------------->",table)
-      container.innerHTML = table;
+      console.log("table-------------->",table);
+      div2 = document.createElement("div");
+      div2.innerHTML = table;
+      container.appendChild(div2);
       sumaSemana = 0;
       k = 0;
       j++;
