@@ -1,4 +1,6 @@
 $(document).ready(function () {
+
+  /* Esto es para la grafica*/
   var timeData = [],
     contadorData = [];
   var data = {
@@ -69,4 +71,24 @@ $(document).ready(function () {
       console.error(err);
     }
   }
+  /* -----------------------------------  */
+
+  let prom = 0;
+  let suma = 0;
+  let i = 0;
+  let j = 0;
+  let k = 0;
+  while(i < datos.length){
+    while(j < datos[i].semanas.length){
+      while(k < datos[i].semanas[j].dias.length){
+        suma += datos[i].semanas[j].dias[k].litros;
+      }
+      j++;
+    }
+    i++;
+  }
+
+  prom = suma/12;
+
+  $("#prom_mes").html(prom);
 });

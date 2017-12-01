@@ -1,15 +1,84 @@
+<!DOCTYPE html>
 <html>
-
 <head>
-    <title>Temperature &amp; Humidity live data</title>
-    <script src="javascripts/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="javascripts/Chart.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="javascripts/index.js" type="text/javascript" charset="utf-8"></script>
+    <title>Datos en litros de contadores de agua</title>
     <link href="stylesheets/style.css" rel="stylesheet" />
 </head>
-
 <body>
     <canvas id="myChart" width="400" height="150"></canvas>
-</body>
 
+    <section class="mes" id="mes">
+    	<table border="0">
+    		<tr>
+    			<td>Enero</td>
+    			<td>Febrero</td>
+    			<td>Marzo</td>
+    			<td>Abril</td>
+    			<td>Mayo</td>
+    			<td>Junio</td>
+    			<td>Julio</td>
+    			<td>Agosto</td>
+    			<td>Septiembre</td>
+    			<td>Octubre</td>
+    			<td>Noviembre</td>
+    			<td>Diciembre</td>
+    			<td>Promedio</td>
+    		</tr>
+    		<tr>
+    			<td>
+    				<div></div>
+    			</td>
+    			<td>
+    				<div></div>
+    			</td>
+    			<td>
+    				<div></div>
+    			</td>
+    			<td>
+    				<div></div>
+    			</td>
+    			<td>
+    				<div></div>
+    			</td>
+    			<td>
+    				<div></div>
+    			</td>
+    			<td>
+    				<div></div>
+    			</td>
+    			<td>
+    				<div></div>
+    			</td>
+    			<td>
+    				<div></div>
+    			</td>
+    			<td>
+    				<div></div>
+    			</td>
+    			<td>
+    				<div></div>
+    			</td>
+    			<td>
+    				<div></div>
+    			</td>
+    			<td>
+    				<div id="prom_mes"></div>
+    			</td>
+    		</tr>
+    	</table>
+    </section>
+
+    <section class="semana" id="semana">
+    	<table border="0"></table>
+    </section>
+
+    <section class="dia" id="dia">
+    	<table border="0"></table>
+    </section>
+
+    <script src="javascripts/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="javascripts/Chart.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="dataFixture/data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="javascripts/index.js" type="text/javascript" charset="utf-8"></script>
+</body>
 </html>
