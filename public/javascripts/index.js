@@ -116,7 +116,7 @@ $(document).ready(function () {
 
   while(i < datos.length){
     div =  document.createElement("div");
-    div.html = datos[i].mes;
+    div.innerHTML = datos[i].mes;
     container.appendChild(div);
     while(j < datos[i].semanas.length){
       table = `
