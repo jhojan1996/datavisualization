@@ -26,11 +26,14 @@ $(document).ready(function () {
       fontSize: 36
     },
     scales: {
+      xAxes: [{
+        display: false
+      }],
       yAxes: [{
         ticks: {
             beginAtZero:true
         }
-      }]
+      }]      
     }
   }
 
