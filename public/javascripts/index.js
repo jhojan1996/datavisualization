@@ -4,6 +4,7 @@ $(document).ready(function () {
   var timeData = [],
     contadorData = [];
   var data = {
+    labels: timeData,
     datasets: [
       {
         fill: false,
