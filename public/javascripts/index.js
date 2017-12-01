@@ -73,6 +73,7 @@ $(document).ready(function () {
   }
   /* -----------------------------------  */
 
+  /* Promedio por mes */
   let prom = 0;
   let sumaTotal = 0;
   let sumaMes = 0;
@@ -98,4 +99,62 @@ $(document).ready(function () {
   prom = (sumaTotal/12).toFixed(2);
 
   $("#prom_mes").html(prom);
+  /* -------------- */
+
+
+  /* Promedio por semana */
+  const container = document.getElementById("semana");
+  let div;
+  let table;
+  let sumaSemana = 0;
+  prom = 0;
+  sumaTotal = 0;
+  i = 0;
+  j = 0;
+  k = 0;
+
+  while(i < datos.length){
+    div =  document.createElement("div");
+    div.html = datos[i].mes;
+    container.appendChild(div);
+    while(j < datos[i].semanas.length){
+      table = `
+        <table> 
+          <tr>
+            <td>Domingo</td>
+            <td>Lunes</td>
+            <td>Martes</td>
+            <td>Miercoles</td>
+            <td>Jueves</td>
+            <td>Viernes</td>
+            <td>Sabado</td>
+            <td>Promedio</td>
+          </tr>
+          <tr>
+      `;
+      while(k < datos[i].semanas[j].dias.length){
+        sumaSemana += datos[i].semanas[j].dias[k].litros;
+        k++;
+        table += `
+            <td>${sumaTotal}</td>
+        `;
+       
+      }
+      table += `
+            <td>${sumaSemana/7}</td>
+          </tr>
+        </table>
+      `;
+      container.innerHTML = table;
+      sumaSemana = 0;
+      k = 0;
+      j++;
+    }
+    j = 0;
+    i++;
+  }
+
+
+  /* ------------------- */
+
 });
