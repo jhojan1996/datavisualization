@@ -117,7 +117,7 @@ $(document).ready(function () {
   while(i < datos.length){
     div =  document.createElement("div");
     div.innerHTML = datos[i].mes;
-    div.addClass = "titleMes";
+    div.className  = "titleMes";
     container.appendChild(div);
     while(j < datos[i].semanas.length){
       table = `
@@ -141,6 +141,15 @@ $(document).ready(function () {
             <td>${datos[i].semanas[j].dias[k].litros}</td>
         `;
        k++;
+      }
+
+      if(k < 6){
+        while(k < 7){
+          table += `
+            <td></td>
+          `;
+          k++;
+        }
       }
       table += `
             <td>${sumaSemana/7}</td>
