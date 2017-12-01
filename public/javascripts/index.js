@@ -134,11 +134,10 @@ $(document).ready(function () {
       `;
       while(k < datos[i].semanas[j].dias.length){
         sumaSemana += datos[i].semanas[j].dias[k].litros;
-        k++;
         table += `
-            <td>${sumaTotal}</td>
+            <td>${datos[i].semanas[j].dias[k]}</td>
         `;
-       
+       k++;
       }
       table += `
             <td>${sumaSemana/7}</td>
