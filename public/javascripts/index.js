@@ -82,9 +82,12 @@ $(document).ready(function () {
     while(j < datos[i].semanas.length){
       while(k < datos[i].semanas[j].dias.length){
         suma += datos[i].semanas[j].dias[k].litros;
+        k++;
       }
+      k = 0;
       j++;
     }
+    j = 0;
     i++;
   }
 
