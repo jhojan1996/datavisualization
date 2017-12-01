@@ -74,24 +74,28 @@ $(document).ready(function () {
   /* -----------------------------------  */
 
   let prom = 0;
-  let suma = 0;
+  let sumaTotal = 0;
+  let sumaMes = 0;
   let i = 0;
   let j = 0;
   let k = 0;
   while(i < datos.length){
     while(j < datos[i].semanas.length){
       while(k < datos[i].semanas[j].dias.length){
-        suma += datos[i].semanas[j].dias[k].litros;
+        sumaTotal += datos[i].semanas[j].dias[k].litros;
+        sumaMes += datos[i].semanas[j].dias[k].litros;
         k++;
       }
       k = 0;
       j++;
     }
+    $("#mes"+i).html(sumaMes);
+    sumaMes = 0;
     j = 0;
     i++;
   }
 
-  prom = suma/12;
+  prom = (sumaTotal/12).toFixed(2);
 
   $("#prom_mes").html(prom);
 });
