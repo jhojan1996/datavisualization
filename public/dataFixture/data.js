@@ -2526,7 +2526,7 @@ const datos = [
 						contador: 1
 					}
 				]
-			}
+			},
 			{
 				id: "Semana 6",
 				dias: [
