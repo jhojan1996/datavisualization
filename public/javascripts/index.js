@@ -154,7 +154,7 @@ $(document).ready(function () {
         }
       }
       table += `
-            <td>${sumaSemana/7}</td>
+            <td>${(sumaSemana/7).toFixed(2)}</td>
           </tr>
         </table>
       `;
