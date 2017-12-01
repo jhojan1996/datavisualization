@@ -117,10 +117,11 @@ $(document).ready(function () {
   while(i < datos.length){
     div =  document.createElement("div");
     div.innerHTML = datos[i].mes;
+    div.addClass = "titleMes";
     container.appendChild(div);
     while(j < datos[i].semanas.length){
       table = `
-        <table> 
+        <table border='1'> 
           <tr>
             <td>Domingo</td>
             <td>Lunes</td>
