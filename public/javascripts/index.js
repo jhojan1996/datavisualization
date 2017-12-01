@@ -121,16 +121,16 @@ $(document).ready(function () {
     container.appendChild(div);
     while(j < datos[i].semanas.length){
       table = `
-        <table border='1'> 
+        <table border='1' class='tablaSemana'> 
           <tr>
-            <td>Domingo</td>
-            <td>Lunes</td>
-            <td>Martes</td>
-            <td>Miercoles</td>
-            <td>Jueves</td>
-            <td>Viernes</td>
-            <td>Sabado</td>
-            <td>Promedio</td>
+            <td><b>Domingo</b></td>
+            <td><b>Lunes</b></td>
+            <td><b>Martes</b></td>
+            <td><b>Miercoles</b></td>
+            <td><b>Jueves</b></td>
+            <td><b>Viernes</b></td>
+            <td><b>Sabado</b></td>
+            <td><b>Promedio</b></td>
           </tr>
           <tr>
       `;
