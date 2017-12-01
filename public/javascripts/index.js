@@ -89,7 +89,7 @@ $(document).ready(function () {
       k = 0;
       j++;
     }
-    $("#mes"+i).html(sumaMes);
+    $("#mes"+(i+1)).html(sumaMes);
     sumaMes = 0;
     j = 0;
     i++;
